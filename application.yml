@@ -15,7 +15,7 @@ spec:
   project: default  
   source:
     repoURL: 'https://github.com/igfurlan/deploy-app.git'
-    path: site-helm
+    path: application-helm
     targetRevision: HEAD
     helm:
       valueFiles:
