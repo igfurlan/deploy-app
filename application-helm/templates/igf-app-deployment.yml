@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       app: furlan-system
-  replicas: 2 # diz ao deployment para executar 2 pods que correspondam ao modelo
+  replicas: 1 # diz ao deployment para executar 2 pods que correspondam ao modelo
   revisionHistoryLimit: 0 #quantos replicaset antigos deve ser mantidos
   template:
     metadata:
