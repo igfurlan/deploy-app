@@ -22,6 +22,6 @@ spec:
       containers:
       - name: furlan-system
         imagePullPolicy: Always
-        image: igfurlan/furlan-system:0314a1c
+        image: igfurlan/furlan-system:d3a0b82
         ports:
         - containerPort: 3000        
