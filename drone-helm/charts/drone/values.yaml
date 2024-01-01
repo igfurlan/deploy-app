@@ -183,7 +183,7 @@ env:
   ## REQUIRED: Set the user-visible Drone hostname, sans protocol.
   ## Ref: https://docs.drone.io/installation/reference/drone-server-host/
   ##
-  DRONE_SERVER_HOST: 999f-93-114-145-16.ngrok-free.app # dominio_do_drone.com
+  DRONE_SERVER_HOST: af9d-93-114-145-16.ngrok-free.app # dominio_do_drone.com
   ## The protocol to pair with the value in DRONE_SERVER_HOST (http or https).
   ## Ref: https://docs.drone.io/installation/reference/drone-server-proto/
   ##
