@@ -54,7 +54,7 @@ podAnnotations: {}
 updateStrategy: {}
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
   annotations: {}
   nodePort:
