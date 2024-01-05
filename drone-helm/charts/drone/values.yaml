@@ -54,7 +54,7 @@ podAnnotations: {}
 updateStrategy: {}
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
   annotations: {}
   nodePort:
@@ -69,7 +69,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: 999f-93-114-145-16.ngrok-free.app # dominio_do_drone.com
+    - host: wise-completely-primate.ngrok-free.app # dominio_do_drone.com
       paths:
         - path: /
           pathType: Prefix
@@ -183,7 +183,7 @@ env:
   ## REQUIRED: Set the user-visible Drone hostname, sans protocol.
   ## Ref: https://docs.drone.io/installation/reference/drone-server-host/
   ##
-  DRONE_SERVER_HOST: 0bde-93-114-145-16.ngrok-free.app # dominio_do_drone.com
+  DRONE_SERVER_HOST: wise-completely-primate.ngrok-free.app # dominio_do_drone.com
   ## The protocol to pair with the value in DRONE_SERVER_HOST (http or https).
   ## Ref: https://docs.drone.io/installation/reference/drone-server-proto/
   ##
@@ -194,7 +194,7 @@ env:
   ## key via a separately provisioned secret (see existingSecretName above).
   ## Ref: https://docs.drone.io/installation/reference/drone-rpc-secret/
   ##
-  DRONE_RPC_SECRET: d9a8f78dcc9e60f26d1673564dcbea29  #gerado no seu linux(no meu caso) a partir desse comando: openssl rand -hex 16
+  DRONE_RPC_SECRET: ae223371b1a0b434d5392b78a204fa7c  #gerado no seu linux(no meu caso) a partir desse comando: openssl rand -hex 16
   DRONE_USER_CREATE: username:igfurlan,admin:true #seu usuario git
   DRONE_USER_FILTER: igfurlan
 
@@ -229,7 +229,7 @@ env:
   ##
   DRONE_GITHUB_CLIENT_ID: 031adb71f64465eeeb15   #git ID gerado em: Settings > Developer settings  > OAuth Apps
 
-  DRONE_GITHUB_CLIENT_SECRET: 800d639efdd5e071dd7451de6dc65b5135d12ef3  #git secret gerado em: Settings > Developer settings  > OAuth Apps
+  DRONE_GITHUB_CLIENT_SECRET: 81e10f2eeb254d7732e0dacaaba8c88f9bfa6ddb  #git secret gerado em: Settings > Developer settings  > OAuth Apps
 
   ## GitLab-specific variables. See the provider docs here:
   ## Ref: https://docs.drone.io/installation/providers/gitlab/
