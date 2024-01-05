@@ -25,5 +25,3 @@ spec:
         image: igfurlan/furlan-system:4c9d5b3
         ports:
         - containerPort: 3000        
-      nodeSelector:
-        app-role=application
