@@ -194,8 +194,7 @@ env:
   ## key via a separately provisioned secret (see existingSecretName above).
   ## Ref: https://docs.drone.io/installation/reference/drone-rpc-secret/
   ##
-  #DRONE_RPC_SECRET: ae223371b1a0b434d5392b78a204fa7c  #gerado no seu linux(no meu caso) a partir desse comando: openssl rand -hex 16
-  DRONE_RPC_SECRET: ${{ secrets.DRONE_RPC_SECRET }}
+  DRONE_RPC_SECRET: ${{ secrets.DRONE_RPC_SECRET }} #gerado no seu linux(no meu caso) a partir desse comando: openssl rand -hex 16
   DRONE_USER_CREATE: username:igfurlan,admin:true #seu usuario git
   DRONE_USER_FILTER: igfurlan
 
@@ -230,7 +229,7 @@ env:
   ##
   DRONE_GITHUB_CLIENT_ID: 031adb71f64465eeeb15   #git ID gerado em: Settings > Developer settings  > OAuth Apps
 
-  DRONE_GITHUB_CLIENT_SECRET: 81e10f2eeb254d7732e0dacaaba8c88f9bfa6ddb  #git secret gerado em: Settings > Developer settings  > OAuth Apps
+  DRONE_GITHUB_CLIENT_SECRET: ${{ secrets.DRONE_GITHUB_CLIENT_SECRET }} #git secret gerado em: Settings > Developer settings  > OAuth Apps
 
   ## GitLab-specific variables. See the provider docs here:
   ## Ref: https://docs.drone.io/installation/providers/gitlab/
