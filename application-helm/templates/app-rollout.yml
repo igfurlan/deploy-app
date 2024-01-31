@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: furlan-system
+spec:
+  replicas: 5
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: {}
+      - setWeight: 60
+      - pause: {duration: 40}
+      - setWeight: 80
+      - pause: {duration: 30}
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: furlan-system
+  template:
+    metadata:
+      labels:
+        app: furlan-system
+    spec:
+      containers:
+      - name: furlan-system
+        image: igfurlan/furlan-system:7a6584d
+        ports:
+        - name: http
+          containerPort: 3000
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m
