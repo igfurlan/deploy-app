@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: furlan-system
-        image: igfurlan/furlan-system:561993b
+        image: igfurlan/furlan-system:7a6584d
         ports:
         - name: http
           containerPort: 3000
