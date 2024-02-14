@@ -33,3 +33,7 @@ spec:
           requests:
             memory: 32Mi
             cpu: 5m
+        securityContext:
+          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
