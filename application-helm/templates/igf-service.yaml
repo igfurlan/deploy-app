@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: furlan-system
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: furlan-system
   ports:
