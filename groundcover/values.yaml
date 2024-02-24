@@ -1,0 +1,23 @@
+clickhouse:
+  # logs storage
+  persistence:
+    size: 80Gi
+  resources:
+    requests:
+      cpu: 300m
+      memory: 1024Mi
+    limits:
+      memory: 2048Mi  
+
+victoria-metrics-single:
+  # metrics storage
+  server:
+    persistentVolume:
+      size: 100Gi 
+    resources:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: 1000m
+        memory: 1024Mi    
